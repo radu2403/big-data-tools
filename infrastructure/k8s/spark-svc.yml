@@ -16,6 +16,3 @@ spec:
     - port: 6066
       targetPort: 6066
       name: uiweb
-    - port: 443
-      targetPort: 443
-      name: sparksubmit
