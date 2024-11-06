@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spark-master-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: spark-master
+  ports:
+    - port: 80
+      targetPort: 8080
+      name: ui
+    - port: 7077
+      targetPort: 7077
+      name: web
+    - port: 6066
+      targetPort: 6066
+      name: uiweb
